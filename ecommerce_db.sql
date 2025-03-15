@@ -54,3 +54,24 @@ INSERT INTO products (name, description, price, stock, image_url) VALUES
 ('Smartphone', 'Latest model smartphone', 599.99, 20, 'smartphone.jpg'),
 ('Headphones', 'Noise-cancelling headphones', 199.99, 15, 'headphones.jpg');
 
+-- Use the existing database
+USE ecommerce_db;
+
+-- Remove old sample products
+DELETE FROM products;
+
+-- Insert new audio accessories products
+INSERT INTO products (name, description, price, stock, image_url) VALUES 
+('Wireless Headphones', 'Noise-cancelling over-ear headphones with Bluetooth connectivity.', 129.99, 20, 'wireless_headphones.jpg'),
+('Gaming Headset', 'High-quality gaming headset with surround sound and built-in mic.', 89.99, 15, 'gaming_headset.jpg'),
+('Bluetooth Speaker', 'Portable Bluetooth speaker with deep bass and 12-hour battery life.', 79.99, 25, 'bluetooth_speaker.jpg'),
+('Studio Microphone', 'Professional condenser microphone for recording and streaming.', 149.99, 10, 'studio_microphone.jpg'),
+('True Wireless Earbuds', 'Compact and waterproof earbuds with noise isolation.', 59.99, 30, 'wireless_earbuds.jpg'),
+('DJ Headphones', 'High-fidelity wired headphones for DJs and music producers.', 199.99, 12, 'dj_headphones.jpg');
+
+-- Commit changes
+COMMIT;
+
+
+
+
