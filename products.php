@@ -17,13 +17,13 @@
         <div class="col-3">
             <img src="IMG-20250309-WA0012.jpg">
             <h3>HEADPHONES</h3>
-            <a href="headphones.php" class="btn" target="_blank">Explore now &#8594;</a>
+            <a href="headphones.php" class="btn">Explore now &#8594;</a>
         </div>
 
         <div class="col-3">
             <img src="IMG-20250309-WA0016.jpg">
             <h3>SPECIAL OFFER</h3>
-            <a href="specialoffer.php" class="btn" target="_blank">Explore now &#8594;</a>
+            <a href="specialoffer.php" class="btn">Explore now &#8594;</a>
         </div>
     </div>
 </div>
