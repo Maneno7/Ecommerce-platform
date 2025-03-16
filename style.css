@@ -128,8 +128,11 @@ p {
     background: burlywood;
 }
 .header {
-    background: radial-gradient(#fff, black);
+    background: radial-gradient(#fff, grey);
+    height: 100vh; 
+    width: 100vw;  
 }
+
 
 h1 {
     color: grey;
@@ -233,4 +236,16 @@ a {
     .header1{
         background: radial-gradient(#fff, grey);
     }
+ 
+    /*-------- cart------*/
+    .cart-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        justify-content: center; 
+        min-height: 100vh; 
+        text-align: center;
+    }
+    
+
     

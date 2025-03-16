@@ -7,6 +7,7 @@
   <title>HEADPHONES</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <div class="header1">
@@ -14,7 +15,9 @@
   <p style="text-align: center;">Here you will find a variety of headphones with unique styles and different colors, all at an affordable price.<strong>Click on the image to explore more</strong></p>
   
   <h2 style="text-align: center;">AVAILABLE PRODUCTS</h2>
-
+  <div style="text-align: left; padding-left: 1080px;">
+    <a href="cart.php" class="btn"><i class="fas fa-shopping-cart"></i> View Cart</a>
+</div>
   <div class="small-container">
       <div class="row">
           <!-- product1-->

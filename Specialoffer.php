@@ -10,6 +10,9 @@
 <body>
               <!-----offer1-----> 
     <div class="header1">
+    <div style="text-align: left; padding-left: 1080px;">
+    <a href="cart.php" class="btn"><i class="fas fa-shopping-cart"></i> View Cart</a>
+</div>
 <div class="offer">
         <div class="m-container">
             
@@ -23,9 +26,9 @@
                 <p>Get the classic AirPods today at an offer of <strong>15% off.</strong> 
                 The pods come in three shades: green, black, and white, with a built-in power bank 
                 system to give you power while on the go.</p>
-                <button class="btn">
-            <i class="fas fa-shopping-cart"></i>Add to cart
-         </button>
+                <button class="btn" onclick="addToCart('Classic AirPods', 5000)">
+                <i class="fas fa-shopping-cart"></i> Add to cart
+           </button>
             </div>          
         </div>
     </div>
@@ -45,14 +48,24 @@
                 <h2>Wireless earpones</h2>
                 <p>Get the wirelesss earphones today at an offer of <strong>25% off.</strong> 
                 The pods come in five shades: green, maroon, white, black, and white.</p>
-                <button class="btn">
-            <i class="fas fa-shopping-cart"></i>Add to cart
-         </button>
+                <button class="btn" onclick="addToCart('Wireless Earphones', 4000)">
+    <i class="fas fa-shopping-cart"></i> Add to cart
+       </button>
           </div>  
             
         </div>
     </div>
     </div>
+    <script>
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    function addToCart(productName, price) {
+        cart.push({ name: productName, price: price });
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert(productName + " added to cart!"); 
+    }
+</script>
+
 </body>
 </html>
 
