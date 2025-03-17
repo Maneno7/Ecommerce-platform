@@ -61,13 +61,20 @@ USE ecommerce_db;
 DELETE FROM products;
 
 -- Insert new audio accessories products
-INSERT INTO products (name, description, price, stock, image_url) VALUES 
-('Wireless Headphones', 'Noise-cancelling over-ear headphones with Bluetooth connectivity.', 129.99, 20, 'wireless_headphones.jpg'),
-('Gaming Headset', 'High-quality gaming headset with surround sound and built-in mic.', 89.99, 15, 'gaming_headset.jpg'),
-('Bluetooth Speaker', 'Portable Bluetooth speaker with deep bass and 12-hour battery life.', 79.99, 25, 'bluetooth_speaker.jpg'),
-('Studio Microphone', 'Professional condenser microphone for recording and streaming.', 149.99, 10, 'studio_microphone.jpg'),
-('True Wireless Earbuds', 'Compact and waterproof earbuds with noise isolation.', 59.99, 30, 'wireless_earbuds.jpg'),
-('DJ Headphones', 'High-fidelity wired headphones for DJs and music producers.', 199.99, 12, 'dj_headphones.jpg');
+INSERT INTO products (name, description, price, stock, image_url) VALUES
+('Charcoal Grey Headphones', 'Stylish charcoal grey headphones with premium sound.', 4500, 10, 'IMG-20250226-WA0005.jpg'),
+('Blue Headphones', 'Experience premium sound with deep bass and noise cancellation.', 5000, 12, 'IMG-20250226-WA0006.jpg'),
+('Grey Headphones', 'Comfortable wireless headphones with immersive audio.', 3800, 15, 'IMG-20250226-WA0007.jpg'),
+('Green Headphones', 'Premium sound with cushioned ear pads for comfort.', 3800, 20, 'IMG-20250226-WA0008.jpg'),
+('Blue Wireless Headphones', 'Wireless headphones with long battery life.', 3000, 18, 'IMG-20250226-WA0009.jpg'),
+('Lavender Headphones', 'Soft color with deep bass and high-quality sound.', 4700, 16, 'IMG-20250226-WA0010.jpg'),
+('Pink Headphones', 'Trendy pink headphones with powerful sound.', 4050, 14, 'IMG-20250226-WA0011.jpg'),
+('Red Headphones', 'Immersive audio with deep bass and noise cancellation.', 5000, 11, 'IMG-20250226-WA0012.jpg'),
+('White Headphones', 'Stylish white headphones with a premium build.', 4800, 9, 'IMG-20250226-WA0014.jpg'),
+('Black Headphones', 'High-quality sound with long battery life.', 4900, 13, 'IMG-20250226-WA0015.jpg'),
+('Lavender Headphones', 'Premium comfort with immersive sound quality.', 6000, 10, 'IMG-20250226-WA0017.jpg'),
+('Maroon Headphones', 'Superior sound and comfort for long listening hours.', 4000, 15, 'IMG-20250226-WA0018.jpg'),
+('Pink Headphones', 'Premium pink headphones with great audio performance.', 4550, 17, 'IMG-20250226-WA0019.jpg');
 
 -- Commit changes
 COMMIT;
