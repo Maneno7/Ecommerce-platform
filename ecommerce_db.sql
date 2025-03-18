@@ -49,14 +49,6 @@ INSERT INTO users (name, email, password, role)
 VALUES ('Admin', 'admin@example.com', MD5('admin123'), 'admin');
 
 -- Step 7: Sample Products
-INSERT INTO products (name, description, price, stock, image_url) VALUES 
-('Laptop', 'High-performance laptop', 799.99, 10, 'laptop.jpg'),
-('Smartphone', 'Latest model smartphone', 599.99, 20, 'smartphone.jpg'),
-('Headphones', 'Noise-cancelling headphones', 199.99, 15, 'headphones.jpg');
-
--- Use the existing database
-USE ecommerce_db;
-
 -- Remove old sample products
 DELETE FROM products;
 

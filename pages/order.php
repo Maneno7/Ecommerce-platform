@@ -3,6 +3,10 @@
 session_start();
 include '../includes/db_connect.php';
 
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
 $user_id = $_SESSION['user_id'];
 
 // Fetch user orders

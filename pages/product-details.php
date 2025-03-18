@@ -1,6 +1,10 @@
 <?php
 // Include the database connection
-include '../config/db_connect.php';
+include '../includes/db_connect.php';
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
 // Check if product ID is provided in the URL
 if (isset($_GET['id'])) {
@@ -53,5 +57,4 @@ if (isset($_GET['id'])) {
 
 </body>
 </html>
-  
-  
+

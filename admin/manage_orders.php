@@ -3,6 +3,10 @@
 session_start();
 include '../includes/db_connect.php';
 
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
 // Ensure only admin can access
 if ($_SESSION['role'] !== 'admin') {
     header("Location: ../index.php");

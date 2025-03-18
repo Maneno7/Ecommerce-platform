@@ -1,6 +1,11 @@
 <?php
 // Product Listing (products.php)
 include '../includes/db_connect.php';
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
 $sql = "SELECT * FROM products";
 $result = $conn->query($sql);
 ?>
