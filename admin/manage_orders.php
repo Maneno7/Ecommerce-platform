@@ -9,7 +9,7 @@ if ($conn->connect_error) {
 
 // Ensure only admin can access
 if ($_SESSION['role'] !== 'admin') {
-    header("Location: ../index.php");
+    header("Location: ../canvas/index.php");
     exit;
 }
 
@@ -22,7 +22,7 @@ $result = $conn->query($sql);
 <html lang="en">
 <head>
     <title>Manage Orders</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../canvas/css/style.css">
 </head>
 <body>
     <h1>Manage Orders</h1>

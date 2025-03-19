@@ -12,7 +12,7 @@ $stmt->bind_param("i", $user_id);
 $stmt->execute();
 $result = $stmt->get_result();
 
-total_price = 0;
+$total_price = 0;
 $order_items = [];
 
 while ($row = $result->fetch_assoc()) {

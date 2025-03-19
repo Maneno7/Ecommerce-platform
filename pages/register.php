@@ -13,13 +13,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $sql = "INSERT INTO users (name, email, password, role) VALUES (?, ?, ?, 'customer')";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("sss", $name, $email, $password);
-    
-    if ($stmt->execute()) {
+    if ($stmt === false) {
+        echo "Error: " . $conn->error;
+    } else {
+        $stmt->bind_param("sss", $name, $email, $password);
+        
+        if ($stmt->execute()) {
         echo "Registration successful!";
     } else {
         echo "Error: " . $conn->error;
     }
+    $stmt->close();
+}
+$conn->close();
 }
 ?>
 
@@ -27,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html lang="en">
 <head>
     <title>Register</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../canvas/css/style.css">
 </head>
 <body>
     <h2>Register</h2>

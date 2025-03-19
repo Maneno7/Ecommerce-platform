@@ -7,6 +7,10 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+if (!isset($_SESSION['user_id'])) {
+    die("User not logged in.");
+}
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $product_id = $_POST['product_id'];
     $user_id = $_SESSION['user_id'];

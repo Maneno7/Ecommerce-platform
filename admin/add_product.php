@@ -9,16 +9,16 @@ if ($conn->connect_error) {
 
 // Ensure only admin can access
 if ($_SESSION['role'] !== 'admin') {
-    header("Location: ../index.php");
+    header("Location: ../canvas/index.php");
     exit;
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = trim($_POST['name']);
-    $description = trim($_POST['description']);
-    $price = $_POST['price'];
-    $stock = $_POST['stock'];
-    $image_url = $_POST['image_url'];
+    $name = htmlspecialchars(trim($_POST['name']));
+    $description = htmlspecialchars(trim($_POST['description']));
+    $price = filter_var($_POST['price'], FILTER_VALIDATE_FLOAT);
+    $stock = filter_var($_POST['stock'], FILTER_VALIDATE_INT);
+    $image_url = htmlspecialchars(trim($_POST['image_url']));
 
     // Validate price and stock
     if ($price <= 0) {
@@ -46,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html lang="en">
 <head>
     <title>Add Product</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css"/>
 </head>
 <body>
     <h2>Add a New Product</h2>

@@ -21,7 +21,7 @@ $result = $stmt->get_result();
 <html lang="en">
 <head>
     <title>Order History</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../canvas/css/style.css">
 </head>
 <body>
     <h1>Your Orders</h1>

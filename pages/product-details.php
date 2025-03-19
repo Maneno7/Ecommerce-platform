@@ -34,25 +34,25 @@ if (isset($_GET['id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($product['name']); ?> - Product Details</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../canvas/css/style.css">
 </head>
 <body>
 
     <div class="product-container">
         <h1><?php echo htmlspecialchars($product['name']); ?></h1>
-        <img src="../assets/images/<?php echo htmlspecialchars($product['image']); ?>" alt="<?php echo htmlspecialchars($product['name']); ?>">
+        <img src="../canvas/images/<?php echo htmlspecialchars($product['image']); ?>" alt="<?php echo htmlspecialchars($product['name']); ?>">
         <p><strong>Price:</strong> $<?php echo number_format($product['price'], 2); ?></p>
         <p><?php echo nl2br(htmlspecialchars($product['description'])); ?></p>
 
         <!-- Add to Cart Form -->
-        <form action="../cart.php" method="POST">
+        <form action="../pages/cart.php" method="POST">
             <input type="hidden" name="product_id" value="<?php echo $product['id']; ?>">
             <label for="quantity">Quantity:</label>
             <input type="number" name="quantity" id="quantity" value="1" min="1">
             <button type="submit">Add to Cart</button>
         </form>
 
-        <a href="../index.php">Back to Shop</a>
+        <a href="../canvas/index.php">Back to Shop</a>
     </div>
 
 </body>

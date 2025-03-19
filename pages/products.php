@@ -14,14 +14,14 @@ $result = $conn->query($sql);
 <html lang="en">
 <head>
     <title>Products</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../canvas/css/style.css">
 </head>
 <body>
     <h1>Our Products</h1>
     <div class="product-list">
         <?php while ($row = $result->fetch_assoc()) { ?>
             <div class="product">
-                <img src="../images/<?php echo htmlspecialchars($row['image_url']); ?>" alt="<?php echo htmlspecialchars($row['name']); ?>">
+                <img src="../canvas/images/<?php echo htmlspecialchars($row['image_url']); ?>" alt="<?php echo htmlspecialchars($row['name']); ?>">
                 <h2><?php echo htmlspecialchars($row['name']); ?></h2>
                 <p><?php echo htmlspecialchars($row['description']); ?></p>
                 <p>Price: $<?php echo number_format($row['price'], 2); ?></p>
@@ -30,6 +30,6 @@ $result = $conn->query($sql);
             </div>
         <?php } ?>
     </div>
-    <script src="../js/script.js"></script>
+    <script src="../canvas/js/script.js"></script>
 </body>
 </html>
