@@ -5,35 +5,35 @@ Project Overview
 
 This is a simple E-Commerce Platform developed as part of our Web Programming II course. The system allows users to browse products, add them to a cart, manage inventory, and place orders. The project was built using PHP, MySQL, HTML, CSS, and JavaScript, with GitHub for version control and XAMPP for local deployment.
 
-Features
+FEATURES
 
-User Authentication – Register, login, and manage user accounts.
+1.User Authentication – Register, login, and manage user accounts.
 
-Product Management – Add, edit, and delete products (Admin).
+2.Product Management – Add, edit, and delete products (Admin).
 
-Cart System – Add products to a cart, update quantity, and remove items.
+3.Cart System – Add products to a cart, update quantity, and remove items.
 
-Order Processing – Place orders and track order status.
+4.Order Processing – Place orders and track order status.
 
-Search & Filtering – Users can search for products and apply filters.
+5.Search & Filtering – Users can search for products and apply filters.
 
-Admin Dashboard – Manage users, orders, and inventory.
-
-
-Technologies Used
-
-Backend: PHP & MySQL
-
-Frontend: HTML, CSS, JavaScript
-
-Database Management: MySQL
-
-Version Control: GitHub
-
-Development Environment: XAMPP & Visual Studio Code
+6.Admin Dashboard – Manage users, orders, and inventory.
 
 
-Project Setup
+PROGRAMMES USED
+
+1.Backend: PHP & MySQL
+
+2.Frontend: HTML, CSS, JavaScript
+
+3.Database Management: MySQL
+
+4.Version Control: GitHub
+
+5.Development Environment: XAMPP & Visual Studio Code
+
+
+PROJECT SETUP
 
 1. Clone the Repository
 
@@ -56,32 +56,31 @@ Open the project in a browser:
 http://localhost/ecommerce-project/
 
 
-Team Members & Responsibilities
+MEMBERS AND THEIR CONTRIBUTIONS
 
-Nimrod – Database, User Admin, Checkout
+1.Nimrod – Database, User Admin, Checkout
 
-Talia – Product Management (Catalog & Inventory)
+2.Talia – Product Management (Catalog & Inventory)
 
-Victor – Cart System, Search & Filters
+3.Victor – Cart System, Search & Filters
 
-Joyce – Order Management (Tracking & Processing)
+4.Joyce – Order Management (Tracking & Processing)
 
 
-Challenges & Solutions
+CHALLENGES EXPERIENCED AND SOLUTIONS USED
 
-Issue: Large images were being cropped when resized.
+Issue:Large images were being cropped when resized.
 Solution: Adjusted CSS styles and used object-fit: contain.
 
 Issue: GitHub collaboration was new for some members.
 Solution: Followed a step-by-step guide on Git workflow.
 
+FUTURE IMPLEMENTATIONS
 
-Future Enhancements
+1.Implementing a payment gateway for online transactions.
 
-Implementing a payment gateway for online transactions.
+2.Adding user reviews & ratings for products.
 
-Adding user reviews & ratings for products.
-
-Enhancing the UI/UX design with a modern layout.
+3.Enhancing the UI/UX design with a modern layout.
 
 
