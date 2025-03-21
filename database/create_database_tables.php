@@ -6,7 +6,7 @@
         if ($conn->query($tables_sql_statements) === TRUE) {
             echo "Table $table_name created successfully" . "<br>";
         } else {
-            echo "Error creating table $table_name: " . $connect->error . "<br>";
+            echo "Error creating table $table_name: " . $conn->error . "<br>";
         }
     }
 
@@ -69,7 +69,7 @@
 
     // Loop through the tables queries in the array
     foreach ($tables_sql_statements as $table_name => $table_sql_statements) {
-        createDatabaseTables($connect, $table_name, $table_sql_statements);
+        createDatabaseTables($conn, $table_name, $table_sql_statements);
     }
 
     $connect->close();

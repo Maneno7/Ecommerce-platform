@@ -113,11 +113,10 @@
                             </button>
                             <?php
                             if ($_SESSION['user_type']==="admin"){
-                                echo "<select id='newStatus' onchange=\"updateOrderStatus('".$order['id']."','".$order['status']."')\">
-                                            <option value=''>Order Status</option>
-                                            <option value='pending'>Pending</option>
-                                            <option value='completed'>Completed</option>
-                                        </select>";
+                                echo "<select class='newStatus' data-id='".$order['id']."' data-status='".$order['status']."'>
+                                <option value=''>Order Status</option>
+                                <option value='pending'>Pending</option>     <option value='completed'>Completed</option>     <option value='cancelled'>Cancelled</option>       
+                                </select>";
                             }
                             ?>
                     </td>
@@ -133,9 +132,11 @@
             window.location.href = `../pages/cancel_order.php?order_id=${orderId}`;
         }
     }
-    function updateOrderStatus(id,status) {
-        if (status !== '') {
-            let newStatus = event.target.value;
+    document.querySelectorAll('.newStatus').forEach(select => {
+        select.addEventListener('change', function(event) {
+            const id = this.dataset.id;
+            const status = this.dataset.status;
+            const newStatus = event.target.value;
             if (status !== newStatus) {
                 if (confirm(`Confirm updating order status from ${status} to ${newStatus}`)) {
                     window.location.href = `../pages/update_orders_status.php?id=${id}&status=${newStatus}`;
@@ -143,8 +144,8 @@
                     event.target.value = status;
                 }
             }
-        }
-    }
+        });
+    });
 </script>
 
 <?php $connect->close(); ?>

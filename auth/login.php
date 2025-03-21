@@ -61,6 +61,8 @@
                     <p class="error"><?php echo $error; ?></p>
                 <?php endif; ?>
 
+                <p>Forgot Password? <a href="../auth/reset_password.php">Forgot Password?</a></p>
+
                 <p>You don't have an account already? <a href="register.php">Register here</a></p>
 
             </div>
